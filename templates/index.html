@@ -4,24 +4,22 @@
   <meta charset="UTF-8">
   <title>Flasky Moraes</title>
 
-  <!-- Importando fontes do Google Fonts -->
+  <!-- Fontes Google -->
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto&family=Arimo&family=Open+Sans&family=Source+Sans+Pro&display=swap"
     rel="stylesheet"
   >
 
-  <!-- Estilos internos -->
   <style>
-    /* Fonte e espaçamento geral */
+    /* Reset e fonte geral */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Roboto', 'Arimo', 'Open Sans', 'Source Sans Pro', Arial, sans-serif;
-      /* cria espaço igual à altura da barra, para não “esconder” o conteúdo */
-      padding-top: 4em;
+      padding-top: 4em; /* espaço raiz para a barra fixa */
     }
 
-    /* Barra preta no topo com altura de 4em (≈ altura de 2 parágrafos) */
+    /* Barra preta fixa */
     .barra-topo {
       position: fixed;
       top: 0;
@@ -30,20 +28,36 @@
       height: 4em;
       background-color: #000;
       z-index: 999;
+
+      /* Flexbox para centralizar verticalmente */
+      display: flex;
+      align-items: center;
+      padding: 0 1em; 
+    }
+
+    /* Título dentro da barra */
+    .barra-topo h3 {
+      color: lightgray;
+      margin: 0;            /* remove margem padrão */
+      font-size: 1rem;      /* ajuste de tamanho, se desejar */
+      white-space: nowrap;  /* evita quebra de linha automática */
     }
   </style>
 
-  <!-- Se tiver um CSS externo -->
+  <!-- CSS externo, se houver -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-  <!-- Barra preta fixa -->
-  <div class="barra-topo"></div>
+  <!-- Barra preta com título dentro -->
+  <div class="barra-topo">
+    <h3>
+      Avaliação contínua: Aula 040   Home   Identificação   Contexto da Requisição
+    </h3>
+  </div>
 
+  <!-- Conteúdo principal -->
   <blockquote>
-    <h3 style="color: lightgray;">
-        Avaliação contínua: Aula 040   Home   Identificação   Contexto da Requisição</h3>
     <h1>Dados da última atualização:</h1>
     <hr style="width: 100%; margin: auto; border: 1px solid black;">
     <p>The local date and time is September 2, 2025 8:15 PM.</p>
