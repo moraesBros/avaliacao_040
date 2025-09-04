@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Flasky Moraes</title>
+
+  <!-- Importando fontes do Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&family=Arimo&family=Open+Sans&family=Source+Sans+Pro&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Estilos internos -->
+  <style>
+    /* Fonte e espaçamento geral */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', 'Arimo', 'Open Sans', 'Source Sans Pro', Arial, sans-serif;
+      /* cria espaço igual à altura da barra, para não “esconder” o conteúdo */
+      padding-top: 4em;
+    }
+
+    /* Barra preta no topo com altura de 4em (≈ altura de 2 parágrafos) */
+    .barra-topo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4em;
+      background-color: #000;
+      z-index: 999;
+    }
+  </style>
+
+  <!-- Se tiver um CSS externo -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Barra preta fixa -->
+  <div class="barra-topo"></div>
+
+  <blockquote>
+    <h3>Avaliação contínua: Aula 040   Home   Identificação   Contexto da Requisição</h3>
+    <h1>Dados da última atualização:</h1>
+    <hr style="width: 100%; margin: auto; border: 1px solid black;">
+    <p>The local date and time is September 2, 2025 8:15 PM.</p>
+    <p>That was 2 minutes ago.</p>
+  </blockquote>
+
+</body>
+</html>
+
