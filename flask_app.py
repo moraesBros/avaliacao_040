@@ -5,19 +5,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    # Pega data e hora atuais
     now = datetime.now()
-    
-    # Formata para strings compatíveis com <input type="date"> e <input type="time">
-    data_atual = now.strftime('%Y-%m-%d')
-    hora_atual = now.strftime('%H:%M:%S')
 
-    # Renderiza o template, passando as variáveis
-    return render_template(
-        'index.html',
-        data_atual=data_atual,
-        hora_atual=hora_atual
-    )
+    # Formata mês em inglês, dia como número, hora em AM/PM
+    # Resultado exemplo: "September 2, 2025  8:15 PM"
+    data_hora = now.strftime("%B %-d, %Y %I:%M %p")  
+    # Para Windows, use "%B %#d, %Y %I:%M %p" ou rstrip em Python:
+    # data_hora = now.strftime("%B %d, %Y %I:%M %p").lstrip("0").replace(" 0", " ")
+
+    return render_template('index.html', data_hora=data_hora)
 
 if __name__ == '__main__':
     app.run(debug=True)
