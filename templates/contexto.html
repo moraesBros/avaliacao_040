@@ -1,1 +1,70 @@
-<p><h1>Ednilton Silva Moraes</h1></p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Flasky Moraes</title>
+
+  <!-- Fontes Google -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&family=Arimo&family=Open+Sans&family=Source+Sans+Pro&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    /* Reset e fonte geral */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', 'Arimo', 'Open Sans', 'Source Sans Pro', Arial, sans-serif;
+      padding-top: 4em; /* espaço raiz para a barra fixa */
+    }
+
+    /* Barra preta fixa */
+    .barra-topo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4em;
+      background-color: #000;
+      z-index: 999;
+
+      /* Flexbox para centralizar verticalmente */
+      display: flex;
+      align-items: center;
+      padding: 0 1em;
+    }
+
+    /* Título dentro da barra */
+    .barra-topo h3 {
+      color: lightgray;
+      margin: 0;            /* remove margem padrão */
+      font-size: 1rem;      /* ajuste de tamanho, se desejar */
+      white-space: nowrap;  /* evita quebra de linha automática */
+    }
+  </style>
+
+  <!-- CSS externo, se houver -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Barra preta com título dentro -->
+  <div class="barra-topo">
+      <blockquote>
+    <h3>Avaliação contínua: Aula 040&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;Identificação&nbsp;&nbsp;&nbsp;Contexto da Requisição</h3>
+    </blockquote>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <blockquote>
+    <h1>Olá, Ednilton Moraes!</h1>
+    <hr style="width: 100%; margin: auto; border: 1px solid black;">
+
+    <p><h1>Seu navegador é: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+O IP do computador remoto é: 10.0.4.170
+O host da aplicação é: ednilton.pythonanywhere.com</h1></p>
+  </blockquote>
+
+</body>
+</html>
